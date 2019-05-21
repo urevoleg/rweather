@@ -6,7 +6,7 @@ Simple meteorological weather site from my weatherstation
 
 Сайт проекта <https://rweather.ru>
 
-***Поучавставовать в сборе данных о погоде можно заполнив [google form](https://forms.gle/qqb2nZxQvaY3juC86)***
+***Поучавставовать в сборе данных о погоде можно, заполнив [google form](https://forms.gle/qqb2nZxQvaY3juC86)***
 ***
 Текущая погода в г.Раменское Московской области
 -------------------------------------------------------
