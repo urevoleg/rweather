@@ -1,4 +1,3 @@
-![](https://rweather.ru/img/header_github.jpg)
 ![](img/header_github.jpg)
 ========================================================
 **rWeather** - Погода в Раменском
