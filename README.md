@@ -1,3 +1,6 @@
+========================================================
+(img/header_github.jpg)
+========================================================
 **rWeather** - Погода в Раменском
 ========================================================
 Simple meteorological weather site from my weatherstation
@@ -32,3 +35,6 @@ Simple meteorological weather site from my weatherstation
   
 вычисляемый по тренду давления (алгоритм взят из [appnotes NXP company](https://www.nxp.com/docs/en/application-note/AN3914.pdf))
 
+-------------------------------------------------------------
+***Подробнее о том как устроена метеотанция читать [здесь](https://docs.google.com/document/d/1Ac72J99dzBsslXN9RBYGBGheJdEMsxDL9WAPOpaAZ20/edit?usp=sharing)***
+***[Больше фото](https://photos.app.goo.gl/RowJdUpUZFsMvuWU8)***
