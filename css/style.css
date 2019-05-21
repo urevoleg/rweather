@@ -1,0 +1,106 @@
+
+@mixin clearfix {
+  &:after {
+    display: table;
+    clear: both;
+    content:'';
+  }
+}
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* оформление для экранов меньше 700px*/
+@media (max-width: 1536px) {
+
+/* общий контейнер (здесь задаем мксимальную ширину нашей сетки)*/
+.l-wrap {
+  --width_wrap: 100%;
+  max-width: var(--width_wrap);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.hideNarrowDevice {
+  display: none;
+}
+/* общие свойства для всех элементов таблицы*/
+.table {
+  font-size: 21;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22); 
+  border-radius: 7px;
+  grid: none;
+}
+
+/* общие свойства для всех элементов страницы (в данном случае ширина и прилипание)*/
+.grid-item-left {
+  --width: 50%;
+  margin-left: calc((100% - var(--width))/2);
+  margin-right: calc((100% - var(--width))/2);
+  float: left;
+}
+.grid-item-rigth {
+  width: 80%;
+  height: 300px;
+  margin-right: 10%;
+  margin-left: 10%;
+  float: left;
+}
+#chartContainer{
+  height: auto;
+  --width: 80%; 
+  margin-left: calc((100% - var(--width))/2);
+  margin-right: calc((100% - var(--width))/2);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  height: 500px;
+}
+.grid-item-in_2 {
+  height: 10px;
+}
+
+}
+
+/* оформление для экранов больше 700px*/
+@media (min-width: 1536px) {
+
+/* общий контейнер (здесь задаем мксимальную ширину нашей сетки)*/
+.l-wrap {
+  --width_wrap: 1140px;
+  max-width: var(--width_wrap);
+  margin-right: auto;
+  margin-left: auto;
+}
+/* общие свойства для всех элементов таблицы*/
+.table {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22); 
+  border-radius: 7px;
+}
+/* общие свойства для всех элементов страницы (в данном случае ширина и прилипание)*/
+.grid-item-left {
+  --width_marg: 5px;
+  width: 30%;
+  margin-right: 0.25%;
+  margin-left: none;
+  float: left;
+}
+.grid-item-right {
+  --width_marg: 5px;
+  width: 66%;
+  height: 500px;
+  margin-right: none;
+  margin-left: 0.25%;
+  float: right;
+}
+#chartContainer{
+  height: 500px;
+  box-shadow: 0 12px 24px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+.grid-item-in_2 {
+  height: 50px;
+}
+}
+
