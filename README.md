@@ -1,4 +1,3 @@
-========================================================
 (img/header_github.jpg)
 ========================================================
 **rWeather** - Погода в Раменском
@@ -37,4 +36,5 @@ Simple meteorological weather site from my weatherstation
 
 -------------------------------------------------------------
 ***Подробнее о том как устроена метеотанция читать [здесь](https://docs.google.com/document/d/1Ac72J99dzBsslXN9RBYGBGheJdEMsxDL9WAPOpaAZ20/edit?usp=sharing)***
-***[Больше фото](https://photos.app.goo.gl/RowJdUpUZFsMvuWU8)***
+
+***Больше в google альбоме [фото](https://photos.app.goo.gl/RowJdUpUZFsMvuWU8)***
