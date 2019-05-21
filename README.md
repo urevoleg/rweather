@@ -30,5 +30,5 @@ Simple meteorological weather site from my weatherstation
    
   3. На пиктограмме погоды отображается краткосрочный прогноз (3 часа),
   
-вычисляемый по тренду давления (алгоритм взят из [appnotes NXP company(https://www.nxp.com/docs/en/application-note/AN3914.pdf)])
+вычисляемый по тренду давления (алгоритм взят из [appnotes NXP company](https://www.nxp.com/docs/en/application-note/AN3914.pdf))
 
