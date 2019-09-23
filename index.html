@@ -47,32 +47,27 @@
     <link rel='stylesheet' href='css/style.css' type='text/css' media='all'>
     <link rel='stylesheet' href='css/bootstrap.min.css' type='text/css' media='all'>
     <link rel="shortcut icon" href="img/favicon.png" type="image/png">
-    <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
-    <script src="js/dataLoad.js"></script>
-    <script type="text/javascript">
-    /*--------------------------График----------------------------------------*/
-    window.onload = function () {
-        tableLoad();
-        dataLoad(document.getElementById("defaultToChart").value, myFunction1);
-    }
-    /*-------------------- КонецГрафик----------------------------------------*/
-    </script> 
 </head>
 <body>
 <div id="header"><img src="img/header.jpg" style="height: 64px; width: 100%;" alt="Погода, Раменское, станция" title="Ж/д станция Раменское в разных погодных условиях"></div>
-<header><h2 style="text-align: center;">Текущая погода в г.Раменское</h2></header>
+<!--<header><h2 style="text-align: center;">Текущая погода в г.Раменское</h2></header>-->
 <div class="l-wrap">
   <div class="two-col-grid">
     <!--блок с пиктограммой и таблицей-->
     <div class="grid-item-left">
     <div class="grid-item-in_1">
-        <div><h3 style="text-align: center;">Погода в Раменском</h3></div>
+        <div><h3 style="text-align: center;">Раменское</h3></div>
+        <div><h5 style="text-align: center;">24 сентября 2019 23:35</h5></div>
         <div>
-            <div class="col-xs-4" id="pickerImg" align="center" style="width: 100px;height: 80px;margin-left: 50px"></div>
-            <div class="col-xs-6" align="right" style="width: auto;height: 80px;margin-right: 0;"><p id="temp" style="font-size: 50;font-family: Impact"></p></div>
+            <div class="col-xs-4" id="pickerImg" align="center" style="width: 100px;height: 80px;margin-left: 50px">
+              <img src="img/icons/clearnight.png">
+            </div>
+            <div class="col-xs-6" align="right" style="width: auto;height: 80px;margin-right: 0;">
+              <p id="temp" style="font-size: 50;font-family: Impact">5.7</p>
+            </div>
             <div style="width: auto;height: 80px;">
-              <div id="temp_max" align="left" style="width: 100%;padding-left: 0;margin-top: 0.2em; color: red;"></div>
-              <div id="temp_min" align="left" style="width: 100%;padding-left: 0;margin-top: 1.7em; color: blue;"></div>
+              <div id="temp_max" align="left" style="width: 100%;padding-left: 0;margin-top: 0.2em; color: red;">7.8°</div>
+              <div id="temp_min" align="left" style="width: 100%;padding-left: 0;margin-top: 1.7em; color: blue;">4.5°</div>
             </div>
             </div>
             <!--<span class="formula" style="font-size: 20;"><span><sup id="temp_max"></sup><sub id="temp_min"></sub></span></span>-->
@@ -82,102 +77,59 @@
             <table class="table" style="width: 100%;" align="center">
                 <tbody>
                   <tr>
-                    <th>Влажность</th>
-                    <th id="hum"></th>
+                    <th>💧 Влажность</th>
+                    <th id="hum">54%</th>
                   </tr>
                   <tr>
-                    <th>Давление</th>
+                    <th>📈 Давление</th>
                       <th>
-                        <table>
+                        <table class="table_in" style="width: 100%;" align="center">
                           <tr>
-                            <th id="pressure"></th>
-                            <td id="pressure_trend"></td>
+                            <th id="pressure">749 мм.рт.ст.</th>
+                            <td id="pressure_trend"> 0.2 мм/час</td>
                           </tr>
                         </table>
                       </th>
                   </tr>
                   <tr>
-                    <th>Скорость ветра</th>
-                    <th id="wind"></th>
+                    <th>💨 Скорость ветра</th>
+                    <th>
+                      <table class="table_in" style="width: 100%;" align="center">
+                          <tr>
+                            <th id="wind">0.5 м/с</th>
+                            <td id="wind_gust">2.7 м/с</td>
+                          </tr>
+                        </table>
+                    </th>
                   </tr>
                   <tr>
-                    <th>Эффективная температура</th>
-                    <th id="tempEff"></th>
-                  </tr>
-                  <tr class="hideNarrowDevice">
-                    <td>Точка росы</td>
-                    <th id="dewPoint"></th>
-                    <td id="dDewPoint"></td>
-                  </tr>
-                  <tr class="hideNarrowDevice">
-                    <td>Освещенность</td>
-                    <td id="light"></td>
+                    <th>🌡💧 Эффективная температура</th>
+                    <th id="tempEff">-2.5°</th>
                   </tr>
                   <tr>
-                    <th>Рад.фон</th>
-                    <th id="geiger"></th>
+                    <td>🌡💧 Точка росы</td>
+                    <th>
+                      <table class="table_in" style="width: 100%;" align="center">
+                          <tr>
+                            <th id="dewPoint">-3.0°</th>
+                            <td id="dDewPoint">8.6°</td>
+                          </tr>
+                        </table>
+                    </th>
+                  </tr>
+                  <tr>
+                    <th>☢ Рад.фон</th>
+                    <th id="geiger">10 мкР/час</th>
                   </tr>
                   </tr>
                   <tr>
-                    <td>Высота облаков</td>
-                    <td id="cloudHeight"></td>
+                    <td>☁️ Высота облаков</td>
+                    <td id="cloudHeight">2000 м</td>
                   </tr>
                 </tbody>
             </table>
         </div>
     </div>
-    <!--блок с графиком-->
-    <div class="grid-item-right">
-        <div class="grid-item-in_2">
-            <!-- блок для размещения чего-нибудь перед графиком-->
-        </div>
-            <div class="col-lg-12">
-                <!-- блок для размещения выпадающего меню-->
-              <div id="dropDownMenu" class="dropDownMenu" align = "center"  onload="getDropDownItem()">
-                <select id =  "dropDownSel" onchange="dataLoad(this.value, myFunction1)">
-                <optgroup label="Температура">
-                  <option value = "temp_day" id="defaultToChart" selected="selected">Дневной график температуры</option>
-                  <option value = "temp_month">Месячный график температуры</option>
-                  <option value = "temp_year">Годовой график температуры</option>
-                </optgroup>
-                
-                <optgroup label="Влажность">
-                  <option value = "hum_day">Дневной график влажности</option>
-                  <option value = "hum_month">Месячный график влажности</option>
-                  <option value = "hum_year">Годовой график влажности</option>
-                </optgroup>
-                <optgroup label="Давление">
-                  <option value = "pressure_day" >Дневной график давления</option>
-                  <option value = "pressure_month">Месячный график давления</option>
-                  <option value = "pressure_year">Годовой график давления</option>
-                </optgroup>
-                <optgroup label="Освещенность">
-                  <option value = "light_day">Дневной график освещенности</option>
-                  <option value = "light_month">Месячный график освещенности</option>
-                  <option value = "light_year">Годовой график освещенности</option>
-                </optgroup>
-                <optgroup label="Радиационный фон">
-                  <option value = "geiger_day">Дневной график радиационного фона</option>
-                  <option value = "geiger_month">Месячный график радиационного фона</option>
-                  <option value = "geiger_year">Годовой график радиационного фона</option>
-                </optgroup>
-                <optgroup label="Скорость ветра">
-                  <option value = "wind_day">Дневной график скорости ветра</option>
-                  <option value = "wind_month">Месячный график скорости ветра</option>
-                  <option value = "wind_year">Годовой график скорости ветра</option>
-                </optgroup>
-                <optgroup label="Эффективная температура">
-                  <option value = "tempEff_day">Дневной график эффективной температуры</option>
-                  <option value = "tempEff_month">Месячный график эффективной температуры</option>
-                  <option value = "tempEff_year">Годовой график эффективной температуры</option>
-                </optgroup>
-                </select>
-              </div>
-            </div>
-        <div class="col-lg-12">
-            <!-- блок для размещения графика-->
-            <div id="chartContainer" class="chartContainer"></div>
-        </div>
     </div>
     </div>
   </div>
